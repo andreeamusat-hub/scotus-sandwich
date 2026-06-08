@@ -1,0 +1,298 @@
+/* ============================================================
+   GT Anywhere — Colors & Type
+   Foundation tokens. Import this first.
+   Path: colors_and_type.css
+   ============================================================ */
+
+/* ---------- Fonts ---------- */
+
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('./InterTight-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('./InterTight-Italic-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Literata';
+  src: url('./Literata-VariableFont_opsz,wght.ttf') format('truetype-variations');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Literata';
+  src: url('./Literata-Italic-VariableFont_opsz,wght.ttf') format('truetype-variations');
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('./Inconsolata-VariableFont_wdth,wght.ttf') format('truetype-variations');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- Tokens ---------- */
+
+:root {
+  /* Brand palette ------------------------------------------- */
+  --gt-gold:          #E48B53;  /* primary accent / action */
+  --gt-gold-hover:    #D17A42;
+  --gt-gold-60:       #EBBA9B;
+  --gt-gold-20:       #F5DDCD;
+  --gt-gold-10:       #FBEEE3;
+
+  --gt-navy-deep:     #002A3A;  /* darkest navy — headers */
+  --gt-navy:          #003B5C;  /* primary navy */
+  --gt-navy-teal:     #004F71;  /* hover */
+  --gt-navy-80:       rgba(0, 59, 92, 0.80);
+  --gt-navy-60:       rgba(0, 59, 92, 0.60);
+  --gt-navy-20:       rgba(0, 59, 92, 0.20);
+  --gt-near-black:    #001117;
+
+  --gt-paper:         #FAF7F2;  /* universal page background */
+  --gt-paper-2:       #F2EDE4;  /* slightly darker paper */
+  --gt-white:         #FFFFFF;
+
+  --gt-grey-mid:      #CAC6C4;
+  --gt-grey-light:    #D9D9D9;
+  --gt-grey-50:       #EBE8E3;
+  --gt-grey-90:       #2A2A2E;
+
+  /* Semantic surfaces ---------------------------------------- */
+  --bg:               var(--gt-paper);
+  --bg-raised:        var(--gt-white);
+  --bg-sunken:        var(--gt-paper-2);
+  --bg-inverse:       var(--gt-navy);
+  --bg-inverse-deep:  var(--gt-navy-deep);
+  --bg-accent-soft:   var(--gt-gold-20);
+
+  /* Semantic foreground -------------------------------------- */
+  --fg:               var(--gt-navy-deep);         /* primary text on paper */
+  --fg-1:             var(--gt-navy-deep);
+  --fg-2:             var(--gt-navy);              /* secondary text */
+  --fg-3:             rgba(0, 42, 58, 0.66);       /* tertiary */
+  --fg-muted:         rgba(0, 42, 58, 0.48);
+  --fg-on-navy:       var(--gt-paper);
+  --fg-on-navy-dim:   rgba(250, 247, 242, 0.72);
+  --fg-on-gold:       var(--gt-navy-deep);
+  --fg-link:          var(--gt-gold);
+  --fg-link-hover:    var(--gt-gold-hover);
+  --fg-accent:        var(--gt-gold);
+
+  /* Borders -------------------------------------------------- */
+  --border-hair:      1px solid var(--gt-grey-light);
+  --border-soft:      1px solid var(--gt-grey-mid);
+  --border-strong:    1px solid rgba(0, 42, 58, 0.18);
+  --border-on-navy:   1px solid rgba(250, 247, 242, 0.18);
+
+  /* Radii ---------------------------------------------------- */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* Shadows — tight, not fluffy ------------------------------ */
+  --shadow-1: 0 1px 2px rgba(0, 42, 58, 0.06), 0 1px 1px rgba(0, 42, 58, 0.04);
+  --shadow-2: 0 4px 14px rgba(0, 42, 58, 0.08), 0 1px 2px rgba(0, 42, 58, 0.04);
+  --shadow-3: 0 10px 30px rgba(0, 42, 58, 0.12), 0 2px 6px rgba(0, 42, 58, 0.06);
+  --shadow-inset: inset 0 0 0 1px rgba(0, 42, 58, 0.08);
+  --shadow-focus: 0 0 0 3px rgba(228, 139, 83, 0.35);
+
+  /* Spacing (4px base) --------------------------------------- */
+  --sp-0:  0;
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  24px;
+  --sp-6:  32px;
+  --sp-7:  48px;
+  --sp-8:  64px;
+  --sp-9:  96px;
+  --sp-10: 128px;
+
+  /* Typography families -------------------------------------- */
+  --ff-display: 'Literata', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --ff-body:    'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ff-mono:    'Inconsolata', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* Weights */
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semi:    600;
+  --fw-bold:    700;
+
+  /* Type scale (clamp(min, fluid, max)) */
+  --fs-xs:   12px;
+  --fs-sm:   14px;
+  --fs-base: 16px;
+  --fs-md:   18px;
+  --fs-lg:   20px;
+  --fs-xl:   24px;
+  --fs-2xl:  32px;
+  --fs-3xl:  40px;
+  --fs-4xl:  56px;
+  --fs-5xl:  72px;
+  --fs-6xl:  96px;
+
+  /* Line heights */
+  --lh-tight:  1.05;
+  --lh-snug:   1.18;
+  --lh-normal: 1.45;
+  --lh-body:   1.55;
+
+  /* Tracking */
+  --tr-tight:    -0.02em;
+  --tr-snug:     -0.01em;
+  --tr-normal:   0;
+  --tr-wide:     0.04em;
+  --tr-wider:    0.14em;   /* eyebrow labels */
+
+  /* Motion --------------------------------------------------- */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:    120ms;
+  --dur-base:    200ms;
+  --dur-slow:    360ms;
+
+  /* Layout containers --------------------------------------- */
+  --container:     1200px;
+  --container-wide: 1440px;
+  --gutter: clamp(16px, 4vw, 48px);
+}
+
+/* ---------- Base ---------- */
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--ff-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--gt-gold-20); color: var(--gt-navy-deep); }
+
+/* ---------- Semantic type ---------- */
+
+.gt-eyebrow {
+  font-family: var(--ff-mono);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: var(--tr-wider);
+  text-transform: uppercase;
+  color: var(--gt-gold);
+  line-height: 1;
+}
+
+.gt-h1, h1.gt {
+  font-family: var(--ff-display);
+  font-weight: 600;
+  font-size: clamp(44px, 6vw, var(--fs-5xl));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-tight);
+  color: var(--fg-1);
+  text-wrap: balance;
+}
+.gt-h2, h2.gt {
+  font-family: var(--ff-display);
+  font-weight: 600;
+  font-size: clamp(32px, 4.2vw, var(--fs-3xl));
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tr-tight);
+  color: var(--fg-1);
+  text-wrap: balance;
+}
+.gt-h3, h3.gt {
+  font-family: var(--ff-display);
+  font-weight: 600;
+  font-size: var(--fs-2xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tr-snug);
+  color: var(--fg-1);
+}
+.gt-h4, h4.gt {
+  font-family: var(--ff-body);
+  font-weight: 600;
+  font-size: var(--fs-lg);
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: var(--fg-1);
+}
+
+.gt-hero-accent {
+  font-family: var(--ff-display);
+  font-style: italic;
+  color: var(--gt-gold);
+  font-weight: 500;
+}
+
+.gt-body, p.gt {
+  font-family: var(--ff-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--fg-1);
+  text-wrap: pretty;
+}
+.gt-body-lg {
+  font-family: var(--ff-body);
+  font-size: var(--fs-md);
+  line-height: var(--lh-body);
+  color: var(--fg-1);
+}
+.gt-small {
+  font-family: var(--ff-body);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--fg-2);
+}
+
+.gt-data {
+  font-family: var(--ff-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' on;
+  font-weight: 600;
+  color: var(--fg-1);
+  letter-spacing: -0.01em;
+}
+.gt-data-xl {
+  font-family: var(--ff-mono);
+  font-weight: 700;
+  font-size: clamp(56px, 8vw, 120px);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--gt-navy-deep);
+  font-variant-numeric: tabular-nums;
+}
+
+.gt-label {
+  font-family: var(--ff-mono);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: var(--tr-wider);
+  text-transform: uppercase;
+  color: var(--fg-2);
+}
+
+code, kbd, samp {
+  font-family: var(--ff-mono);
+  font-size: 0.95em;
+}
