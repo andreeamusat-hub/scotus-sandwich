@@ -228,7 +228,9 @@
   }
 
   /* ---------- Storage (shared window.storage, else localStorage) ---------- */
-  const KEY = "scotsa.caselaw.v2";
+  // Bump this version when the founding SEED changes so returning visitors
+  // (whose old store isn't empty) re-seed to the latest body of case law.
+  const KEY = "scotsa.caselaw.v3";
   const STOP = new Set("a an the of is it in on to and or for with this that does do can be as".split(" "));
 
   async function rawGet() {
